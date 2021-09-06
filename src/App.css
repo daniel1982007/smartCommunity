@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
+  background-color: #f3f3f4;
+  width: 100vw;
+}
+
+.side-bar {
+  /* transition property is quite funny for implement of animation*/
+  width: 260px;
+  height: 100%;
+  background-color: #2f4050;
+  transition-duration: 250ms;
+  transition-property: width;
+}
+
+.small {
+  width: 100px;
+}
+
+.side-bar-header {
+  padding: 8px 16px;
+  background-color: #293846;
+  color: #EFF4F3;
+}
+
+.side-bar-header:hover {
+  cursor: pointer;
+}
+
+/* when a Link tag, in css you need use a tag */
+.side-bar-header a {
+  /* color: #B4BCBB; */
+  color: #EFF4F3;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.p-1 {
+  padding: 5px;
 }
+
+.menu {
+  list-style: none;
+}
+
+.menu-icon {
+  flex-basis: 30%;
+  margin: 0 auto;
+  color: #B4BCBB;
+}
+
+/* .menu-icon:hover {
+  color: red;
+} */
+
+.menu-title {
+  flex-basis: 70%;
+  color: #B4BCBB;
+}
+
+.menu-link {
+  text-decoration: none;
+}
+
+.active {
+  background-color: #293846;
+}
+
+.active * {
+  color: #EFF4F3
+}
+
+.menu>li>a:hover {
+  background-color: #293846;
+  cursor: pointer;
+}
+
+.menu>li>a:hover * {
+  color: #EFF4F3;
+}
+
+/* flex: 1 means takes all left spaces */
+.page {
+  flex: 1;
+}
+
+.show-submenu {
+  display: block;
+  height: auto;
+  opacity: 1;
+  background-color: #293846;
+  transition-duration: 700ms;
+  transition-property: opacity;
+}
+/* how to make height transition? */
+
+.hide-submenu {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.ul_side {
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+
+.menu li ul a {
+  text-decoration: none;
+  color: #B4BCBB;
+  padding: 4px 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu li ul a:hover {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: #EFF4F3
+}
+
+.menu li ul a:focus {
+  color: #EFF4F3;
+}
+
+.menu li ul a h5 {
+  flex-basis: 70%;
+}
+
+.navbar {
+  background-color: #fff;
+  color: #4f5252;
+  display: flex;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar p {
+  flex-basis: 70%;
+}
+
+.navbar-header {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* .navbar-header h4 {
+  flex: 0.5;
+}
+
+.navbar-header div {
+  flex-grow: 1;
+} */
+
+.logout {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #4f5252;
+  transition-duration: 1000ms;
+  transition-property: rotate ease-in
+}
+
+.logout:hover {
+  transform: rotate(45deg)
+}
+
+
+
+
+
+
+
+
+
+
+
